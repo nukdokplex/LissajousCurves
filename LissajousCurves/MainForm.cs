@@ -29,6 +29,7 @@ namespace LissajousCurves
         {
             glControl.MakeCurrent();
             GL.Viewport(0, 0, glControl.Width, glControl.Height);
+            viewPortSizeLabel.Text = $"{glControl.Width}x{glControl.Height}";
 
         }
 
@@ -49,9 +50,27 @@ namespace LissajousCurves
             GL.End();
             
             glControl.SwapBuffers();
-            deltaInput.Value += deltaDeltaInput.Value;
-            alphaInput.Value += deltaAlphaInput.Value;
-            betaInput.Value += deltaBetaInput.Value;
+            if (((float)deltaInput.Value) > 2 * Math.PI)
+                deltaInput.Value = 0;
+            else
+                deltaInput.Value += deltaDeltaInput.Value;
+            
+            try
+            {
+                alphaInput.Value += deltaAlphaInput.Value;
+            }
+            catch
+            {
+                alphaInput.Value = 0;
+            }
+            try
+            {
+                betaInput.Value += deltaBetaInput.Value;
+            }
+            catch
+            {
+                betaInput.Value =0;
+            }
         }
 
         private Vector2 getPoint(float t)

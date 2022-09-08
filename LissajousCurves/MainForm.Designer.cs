@@ -30,6 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.deltaBetaInput = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.deltaAlphaInput = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.deltaDeltaInput = new System.Windows.Forms.NumericUpDown();
+            this.deltaInput = new System.Windows.Forms.NumericUpDown();
+            this.deltaTInput = new System.Windows.Forms.NumericUpDown();
+            this.betaInput = new System.Windows.Forms.NumericUpDown();
+            this.alphaInput = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,27 +46,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.glControl = new OpenTK.GLControl();
             this.glTimer = new System.Windows.Forms.Timer(this.components);
-            this.alphaInput = new System.Windows.Forms.NumericUpDown();
-            this.betaInput = new System.Windows.Forms.NumericUpDown();
-            this.deltaTInput = new System.Windows.Forms.NumericUpDown();
-            this.deltaInput = new System.Windows.Forms.NumericUpDown();
-            this.deltaDeltaInput = new System.Windows.Forms.NumericUpDown();
-            this.deltaAlphaInput = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.deltaBetaInput = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.viewPortSizeLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.alphaInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.betaInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deltaTInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deltaInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deltaDeltaInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deltaAlphaInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deltaBetaInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deltaAlphaInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deltaDeltaInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deltaInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deltaTInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.betaInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alphaInput)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.viewPortSizeLabel);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.deltaBetaInput);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.deltaAlphaInput);
@@ -77,6 +81,142 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(188, 360);
             this.panel1.TabIndex = 0;
+            // 
+            // deltaBetaInput
+            // 
+            this.deltaBetaInput.DecimalPlaces = 5;
+            this.deltaBetaInput.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.deltaBetaInput.Location = new System.Drawing.Point(42, 90);
+            this.deltaBetaInput.Name = "deltaBetaInput";
+            this.deltaBetaInput.Size = new System.Drawing.Size(140, 20);
+            this.deltaBetaInput.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(3, 90);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(33, 20);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Δβ:";
+            // 
+            // deltaAlphaInput
+            // 
+            this.deltaAlphaInput.DecimalPlaces = 5;
+            this.deltaAlphaInput.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.deltaAlphaInput.Location = new System.Drawing.Point(42, 38);
+            this.deltaAlphaInput.Name = "deltaAlphaInput";
+            this.deltaAlphaInput.Size = new System.Drawing.Size(140, 20);
+            this.deltaAlphaInput.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(3, 38);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(33, 20);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Δα:";
+            // 
+            // deltaDeltaInput
+            // 
+            this.deltaDeltaInput.DecimalPlaces = 5;
+            this.deltaDeltaInput.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.deltaDeltaInput.Location = new System.Drawing.Point(42, 168);
+            this.deltaDeltaInput.Name = "deltaDeltaInput";
+            this.deltaDeltaInput.Size = new System.Drawing.Size(140, 20);
+            this.deltaDeltaInput.TabIndex = 14;
+            // 
+            // deltaInput
+            // 
+            this.deltaInput.DecimalPlaces = 5;
+            this.deltaInput.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.deltaInput.Location = new System.Drawing.Point(42, 142);
+            this.deltaInput.Name = "deltaInput";
+            this.deltaInput.Size = new System.Drawing.Size(140, 20);
+            this.deltaInput.TabIndex = 13;
+            // 
+            // deltaTInput
+            // 
+            this.deltaTInput.DecimalPlaces = 2;
+            this.deltaTInput.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.deltaTInput.Location = new System.Drawing.Point(42, 116);
+            this.deltaTInput.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.deltaTInput.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.deltaTInput.Name = "deltaTInput";
+            this.deltaTInput.Size = new System.Drawing.Size(140, 20);
+            this.deltaTInput.TabIndex = 12;
+            this.deltaTInput.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            // 
+            // betaInput
+            // 
+            this.betaInput.DecimalPlaces = 5;
+            this.betaInput.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.betaInput.Location = new System.Drawing.Point(42, 64);
+            this.betaInput.Name = "betaInput";
+            this.betaInput.Size = new System.Drawing.Size(140, 20);
+            this.betaInput.TabIndex = 11;
+            this.betaInput.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // alphaInput
+            // 
+            this.alphaInput.DecimalPlaces = 5;
+            this.alphaInput.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.alphaInput.Location = new System.Drawing.Point(42, 12);
+            this.alphaInput.Name = "alphaInput";
+            this.alphaInput.Size = new System.Drawing.Size(140, 20);
+            this.alphaInput.TabIndex = 10;
+            this.alphaInput.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label5
             // 
@@ -146,141 +286,24 @@
             this.glTimer.Interval = 16;
             this.glTimer.Tick += new System.EventHandler(this.glTimer_Tick);
             // 
-            // alphaInput
+            // label8
             // 
-            this.alphaInput.DecimalPlaces = 5;
-            this.alphaInput.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.alphaInput.Location = new System.Drawing.Point(42, 12);
-            this.alphaInput.Name = "alphaInput";
-            this.alphaInput.Size = new System.Drawing.Size(140, 20);
-            this.alphaInput.TabIndex = 10;
-            this.alphaInput.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(3, 191);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(79, 20);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Viewport: ";
             // 
-            // betaInput
+            // viewPortSizeLabel
             // 
-            this.betaInput.DecimalPlaces = 5;
-            this.betaInput.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.betaInput.Location = new System.Drawing.Point(42, 64);
-            this.betaInput.Name = "betaInput";
-            this.betaInput.Size = new System.Drawing.Size(140, 20);
-            this.betaInput.TabIndex = 11;
-            this.betaInput.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // deltaTInput
-            // 
-            this.deltaTInput.DecimalPlaces = 2;
-            this.deltaTInput.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.deltaTInput.Location = new System.Drawing.Point(42, 116);
-            this.deltaTInput.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.deltaTInput.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.deltaTInput.Name = "deltaTInput";
-            this.deltaTInput.Size = new System.Drawing.Size(140, 20);
-            this.deltaTInput.TabIndex = 12;
-            this.deltaTInput.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            // 
-            // deltaInput
-            // 
-            this.deltaInput.DecimalPlaces = 5;
-            this.deltaInput.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.deltaInput.Location = new System.Drawing.Point(42, 142);
-            this.deltaInput.Name = "deltaInput";
-            this.deltaInput.Size = new System.Drawing.Size(140, 20);
-            this.deltaInput.TabIndex = 13;
-            // 
-            // deltaDeltaInput
-            // 
-            this.deltaDeltaInput.DecimalPlaces = 5;
-            this.deltaDeltaInput.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.deltaDeltaInput.Location = new System.Drawing.Point(42, 168);
-            this.deltaDeltaInput.Name = "deltaDeltaInput";
-            this.deltaDeltaInput.Size = new System.Drawing.Size(140, 20);
-            this.deltaDeltaInput.TabIndex = 14;
-            // 
-            // deltaAlphaInput
-            // 
-            this.deltaAlphaInput.DecimalPlaces = 5;
-            this.deltaAlphaInput.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.deltaAlphaInput.Location = new System.Drawing.Point(42, 38);
-            this.deltaAlphaInput.Name = "deltaAlphaInput";
-            this.deltaAlphaInput.Size = new System.Drawing.Size(140, 20);
-            this.deltaAlphaInput.TabIndex = 16;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(3, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 20);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Δα:";
-            // 
-            // deltaBetaInput
-            // 
-            this.deltaBetaInput.DecimalPlaces = 5;
-            this.deltaBetaInput.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.deltaBetaInput.Location = new System.Drawing.Point(42, 90);
-            this.deltaBetaInput.Name = "deltaBetaInput";
-            this.deltaBetaInput.Size = new System.Drawing.Size(140, 20);
-            this.deltaBetaInput.TabIndex = 18;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(3, 90);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 20);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Δβ:";
+            this.viewPortSizeLabel.AutoSize = true;
+            this.viewPortSizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.viewPortSizeLabel.Location = new System.Drawing.Point(71, 191);
+            this.viewPortSizeLabel.Name = "viewPortSizeLabel";
+            this.viewPortSizeLabel.Size = new System.Drawing.Size(0, 20);
+            this.viewPortSizeLabel.TabIndex = 20;
             // 
             // MainForm
             // 
@@ -296,13 +319,13 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.alphaInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.betaInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deltaTInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deltaInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deltaDeltaInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deltaAlphaInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deltaBetaInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deltaAlphaInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deltaDeltaInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deltaInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deltaTInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.betaInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alphaInput)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -326,6 +349,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown deltaAlphaInput;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label viewPortSizeLabel;
+        private System.Windows.Forms.Label label8;
     }
 }
 
